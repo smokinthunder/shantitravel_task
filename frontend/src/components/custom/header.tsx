@@ -6,6 +6,7 @@ import { TopBar } from "@/components/header/top-bar";
 import { Logo } from "@/components/header/logo";
 import { MainNavigation } from "@/components/header/main-navigation";
 import { ActionButton } from "@/components/ui/action-button";
+import { useScrollDirection } from "@/hooks/use-scroll-direction";
 
 interface HeaderProps {
   data: HeaderType;
@@ -13,16 +14,28 @@ interface HeaderProps {
 
 /**
  * Main header component with top bar and navigation
+ * Shows sticky header only when scrolling upward
  */
 export default function Header({ data }: HeaderProps) {
+  const { scrollDirection, isScrolled } = useScrollDirection();
+  
   if (!data) {
     return null;
   }
 
   const { logo, links, menuTabs, phone, language, button } = data;
 
+  // Show sticky header when scrolling up and not at top, or when at the very top
+  const showStickyHeader = !isScrolled || scrollDirection === "up";
+  
   return (
-    <header className="w-full bg-white shadow-md p-4 px-20 sticky top-0 z-50">
+    <header 
+      className={`
+        w-full bg-white shadow-md p-4 px-20 fixed top-0 z-50 
+        transition-transform duration-300 ease-in-out
+        ${showStickyHeader ? 'translate-y-0' : '-translate-y-full'}
+      `}
+    >
       <div className="flex flex-col space-y-4">
         {/* Top Bar with Links and Contact Info */}
         <TopBar 
