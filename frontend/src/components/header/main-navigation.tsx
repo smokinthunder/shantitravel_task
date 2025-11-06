@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ChevronDown } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -16,13 +17,16 @@ interface MainNavigationProps {
 
 export function MainNavigation({ menuTabs }: MainNavigationProps) {
   return (
-    <div className="flex flex-row justify-center">
+    <div className="flex flex-row justify-center **:list-none **:before:hidden **:after:hidden">
       {menuTabs?.map((menuItem) => (
         <NavigationMenu key={menuItem.id}>
           {menuItem.hasDropdown ? (
             <NavigationMenuItem className="hidden md:block">
-              <NavigationMenuTrigger className={UI_CONSTANTS.TRANSITIONS.COLORS}>
-                {menuItem.label}
+              <NavigationMenuTrigger className={`${UI_CONSTANTS.TRANSITIONS.COLORS} [&>svg]:hidden`}>
+                <span className="flex items-center gap-1">
+                  {menuItem.label}
+                  <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                </span>
               </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[200px] gap-4 p-4">
