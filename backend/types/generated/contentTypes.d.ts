@@ -482,12 +482,14 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     guidesSection: Schema.Attribute.Component<'layout.guides-section', false>;
     image1: Schema.Attribute.Media<'images'>;
     image2: Schema.Attribute.Media<'images'>;
+    imagesSection: Schema.Attribute.Media<'images', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::home-page.home-page'
     > &
       Schema.Attribute.Private;
+    longDescription: Schema.Attribute.Blocks;
     needHelp: Schema.Attribute.Component<'layout.need-help', false>;
     publishedAt: Schema.Attribute.DateTime;
     reasons: Schema.Attribute.Component<'layout.reasons', false>;

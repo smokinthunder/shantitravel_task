@@ -40,7 +40,8 @@ export const STRAPI_QUERIES = {
       '&populate[guidesSection][populate][guideCards][populate]=*' +
       '&populate[guidesSection][populate][button]=*' +
       '&populate[needHelp][populate][button]=*' +
-      '&populate[reasons][populate][reason]=*'
+      '&populate[reasons][populate][reason]=*' +
+      '&populate[imagesSection]=true'
 
     );
   },

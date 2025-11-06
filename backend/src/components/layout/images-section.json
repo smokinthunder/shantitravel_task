@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_layout_images_sections",
+  "info": {
+    "displayName": "ImagesSection"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

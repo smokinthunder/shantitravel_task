@@ -87,7 +87,19 @@ export interface TermsAndConditions {
 
 export interface ClimateForMonth {
   id: number;
-  Month: 'Jan' | 'Feb' | 'Mar' | 'Apr' | 'May' | 'Jun' | 'Jul' | 'Aug' | 'Sep' | 'Oct' | 'Nov' | 'Dec';
+  Month:
+    | "Jan"
+    | "Feb"
+    | "Mar"
+    | "Apr"
+    | "May"
+    | "Jun"
+    | "Jul"
+    | "Aug"
+    | "Sep"
+    | "Oct"
+    | "Nov"
+    | "Dec";
   avgTemp: number;
   sunnyDays: number;
 }
@@ -108,25 +120,24 @@ export interface TourCard {
   link: string;
 }
 
-export interface NeedHelp{
+export interface NeedHelp {
   id: number;
   title: string;
   subtitle: string;
   button: Link;
 }
 
-export interface Reason{
+export interface Reason {
   id: number;
   title: string;
   description: any[]; // Strapi blocks type
 }
 
-export interface Reasons{
+export interface Reasons {
   id: number;
   title: string;
   reason: Reason[];
 }
-
 
 export interface ToursSection {
   id: number;
@@ -191,6 +202,8 @@ export interface HomePage {
   guidesSection: GuidesSection;
   needHelp: NeedHelp;
   reasons: Reasons;
+  longDescription: any[]; // Strapi blocks type
+  imagesSection: StrapiMedia[];
   createdAt: string;
   updatedAt: string;
   publishedAt: string;

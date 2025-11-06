@@ -68,6 +68,16 @@
       "type": "component",
       "component": "layout.reasons",
       "repeatable": false
+    },
+    "longDescription": {
+      "type": "blocks"
+    },
+    "imagesSection": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

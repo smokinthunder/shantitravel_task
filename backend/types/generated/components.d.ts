@@ -150,6 +150,16 @@ export interface LayoutHeader extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutImagesSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_images_sections';
+  info: {
+    displayName: 'ImagesSection';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images', true>;
+  };
+}
+
 export interface LayoutNeedHelp extends Struct.ComponentSchema {
   collectionName: 'components_layout_need_helps';
   info: {
@@ -246,6 +256,7 @@ declare module '@strapi/strapi' {
       'layout.footer': LayoutFooter;
       'layout.guides-section': LayoutGuidesSection;
       'layout.header': LayoutHeader;
+      'layout.images-section': LayoutImagesSection;
       'layout.need-help': LayoutNeedHelp;
       'layout.reasons': LayoutReasons;
       'layout.termsand-conditions': LayoutTermsandConditions;

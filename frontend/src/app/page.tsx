@@ -1,12 +1,15 @@
-import { fetchHomePageData } from "@/lib/strapi";
+import { fetchHomePageData, getStrapiMedia } from "@/lib/strapi";
 import { HeroSection } from "@/components/sections/hero-section";
 import { ClimateSection } from "@/components/sections/climate-section";
 import { ToursSection } from "@/components/sections/tours-section";
 import { GuidesSection } from "@/components/sections/guides-section";
-import { UI_CONSTANTS } from "@/lib/constants";
+import { IMAGE_CONFIG, UI_CONSTANTS } from "@/lib/constants";
 import { ERROR_MESSAGES } from "@/lib/constants";
 import NeedHelpSection from "@/components/sections/needHelp-section";
 import ReasonsSection from "@/components/sections/reasons-section";
+import LongDescriptionSection from "@/components/sections/long-description-section.tsx";
+import ImageSection from "@/components/sections/image-section";
+import Image from "next/image";
 
 /**
  * HomePage component with structured sections
@@ -35,6 +38,8 @@ export default async function HomePage() {
     guidesSection,
     needHelp,
     reasons,
+    longDescription,
+    imagesSection,
   } = homePageData;
 
   return (
@@ -64,6 +69,13 @@ export default async function HomePage() {
       {needHelp && <NeedHelpSection needHelp={needHelp} />}
 
       {reasons && <ReasonsSection reasonsSection={reasons} />}
+
+      {longDescription && (
+        <LongDescriptionSection longDescription={longDescription} />
+      )}
+      {imagesSection && <ImageSection images={imagesSection} />}
+
+      
     </main>
   );
 }
