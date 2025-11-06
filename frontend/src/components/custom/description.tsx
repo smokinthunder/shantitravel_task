@@ -4,7 +4,7 @@ import { useState } from "react";
 import parse from "html-react-parser";
 import { renderBlocksContent } from "@/lib/strapi";
 
-export default function DescriptionWithReadMore({ description, charLimit = 3 }) {
+export default function DescriptionWithReadMore({ description , charLimit = 3 }: { description: any[], charLimit?: number }) {
   const [expanded, setExpanded] = useState(false);
 
   if (!description || description.length === 0) return null;
@@ -15,7 +15,7 @@ export default function DescriptionWithReadMore({ description, charLimit = 3 }) 
   // Convert description to plain text for truncation preview
   const plainText = Array.isArray(description)
     ? description.map((block) => JSON.stringify(block)).join(" ")
-    : description.toString();
+    : String(description);
 
   const isLong = plainText.length > charLimit;
 
