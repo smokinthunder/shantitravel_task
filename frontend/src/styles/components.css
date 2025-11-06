@@ -1,0 +1,142 @@
+/**
+ * Reusable CSS classes and design tokens
+ * Following design system principles for consistency
+ */
+
+/* Layout utilities */
+.container-padding {
+  @apply px-4;
+}
+
+.section-spacing {
+  @apply py-16;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+/* Text utilities */
+.text-heading-xl {
+  @apply text-4xl font-serif leading-tight;
+}
+
+.text-heading-lg {
+  @apply text-3xl font-serif leading-tight;
+}
+
+.text-heading-md {
+  @apply text-2xl font-semibold;
+}
+
+.text-heading-sm {
+  @apply text-xl font-semibold;
+}
+
+.text-caption {
+  @apply text-sm text-gray-600;
+}
+
+.text-overline {
+  @apply text-xs font-medium text-gray-600 uppercase tracking-wide;
+}
+
+/* Button variants */
+.btn-primary {
+  @apply px-6 py-2 bg-primary text-white rounded-md font-medium transition-all duration-300 hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+}
+
+.btn-secondary {
+  @apply px-6 py-2 bg-transparent border-2 border-primary text-primary rounded-md font-medium transition-all duration-300 hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+}
+
+.btn-ghost {
+  @apply px-4 py-2 text-gray-700 rounded-md font-medium transition-colors duration-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2;
+}
+
+/* Card components */
+.card {
+  @apply bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-md hover:scale-[1.02];
+}
+
+.card-content {
+  @apply p-6;
+}
+
+/* Grid utilities */
+.grid-responsive {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+}
+
+.grid-gap-sm {
+  @apply gap-4;
+}
+
+.grid-gap-md {
+  @apply gap-6;
+}
+
+.grid-gap-lg {
+  @apply gap-12;
+}
+
+/* Transition utilities */
+.transition-default {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.transition-fast {
+  @apply transition-all duration-150 ease-in-out;
+}
+
+.transition-slow {
+  @apply transition-all duration-500 ease-in-out;
+}
+
+/* Image utilities */
+.image-overlay {
+  @apply absolute inset-0 bg-black bg-opacity-0 transition-opacity duration-300 group-hover:bg-opacity-20;
+}
+
+.image-scale-hover {
+  @apply transition-transform duration-300 group-hover:scale-105;
+}
+
+/* Loading states */
+.skeleton {
+  @apply animate-pulse bg-gray-200 rounded;
+}
+
+.spinner {
+  @apply animate-spin rounded-full border-2 border-gray-300 border-t-primary;
+}
+
+/* Focus states */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+}
+
+/* Status utilities */
+.status-success {
+  @apply text-green-600 bg-green-50 border-green-200;
+}
+
+.status-warning {
+  @apply text-yellow-600 bg-yellow-50 border-yellow-200;
+}
+
+.status-error {
+  @apply text-red-600 bg-red-50 border-red-200;
+}
+
+.status-info {
+  @apply text-blue-600 bg-blue-50 border-blue-200;
+}
