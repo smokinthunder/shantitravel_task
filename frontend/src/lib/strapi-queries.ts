@@ -36,7 +36,12 @@ export const STRAPI_QUERIES = {
       '&populate[climate][populate][months]=*' +
       '&populate[toursSection][populate][tourCards][populate][image]=true' +
       '&populate[toursSection][populate][tourCards][populate][highlights]=*' +
-      '&populate[toursSection][populate][viewAllButton]=*'
+      '&populate[toursSection][populate][viewAllButton]=*' +
+      '&populate[guidesSection][populate][guideCards][populate]=*' +
+      '&populate[guidesSection][populate][button]=*' +
+      '&populate[needHelp][populate][button]=*' +
+      '&populate[reasons][populate][reason]=*'
+
     );
   },
 } as const;

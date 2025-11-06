@@ -28,13 +28,13 @@ export function HeroSection({
       {/* Content Section */}
       <div className="md:w-1/2 space-y-6">
         {region && (
-          <p className="text-sm font-medium text-gray-600 uppercase tracking-wide">
+          <p className="text-lg font-medium text-gray-600 uppercase tracking-wide">
             {region}
           </p>
         )}
         
         {title && (
-          <h1 className="text-3xl font-serif leading-tight">
+          <h1 className="text-4xl font-serif leading-tight">
             {title}
           </h1>
         )}

@@ -108,12 +108,39 @@ export interface TourCard {
   link: string;
 }
 
+export interface NeedHelp{
+  id: number;
+  title: string;
+  subtitle: string;
+  button: Link;
+}
+
+export interface Reason{
+  id: number;
+  title: string;
+  description: any[]; // Strapi blocks type
+}
+
+export interface Reasons{
+  id: number;
+  title: string;
+  reason: Reason[];
+}
+
+
 export interface ToursSection {
   id: number;
   title: string;
   subtitle: string;
   tourCards: TourCard[];
   viewAllButton: Link;
+}
+
+export interface GuidesSection {
+  id: number;
+  title: string;
+  guideCards: ImageLink[];
+  button: Link;
 }
 
 // Layout Component Types
@@ -161,6 +188,9 @@ export interface HomePage {
   image2: StrapiMedia;
   climate: Climate;
   toursSection: ToursSection;
+  guidesSection: GuidesSection;
+  needHelp: NeedHelp;
+  reasons: Reasons;
   createdAt: string;
   updatedAt: string;
   publishedAt: string;

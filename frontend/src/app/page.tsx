@@ -2,8 +2,11 @@ import { fetchHomePageData } from "@/lib/strapi";
 import { HeroSection } from "@/components/sections/hero-section";
 import { ClimateSection } from "@/components/sections/climate-section";
 import { ToursSection } from "@/components/sections/tours-section";
+import { GuidesSection } from "@/components/sections/guides-section";
 import { UI_CONSTANTS } from "@/lib/constants";
 import { ERROR_MESSAGES } from "@/lib/constants";
+import NeedHelpSection from "@/components/sections/needHelp-section";
+import ReasonsSection from "@/components/sections/reasons-section";
 
 /**
  * HomePage component with structured sections
@@ -29,10 +32,15 @@ export default async function HomePage() {
     image2,
     climate,
     toursSection,
+    guidesSection,
+    needHelp,
+    reasons,
   } = homePageData;
 
   return (
-    <main className={`container mx-auto ${UI_CONSTANTS.CONTAINER_PADDING} ${UI_CONSTANTS.SECTION_SPACING}`}>
+    <main
+      className={`container mx-auto ${UI_CONSTANTS.CONTAINER_PADDING} ${UI_CONSTANTS.SECTION_SPACING}`}
+    >
       {/* Hero Section */}
       <HeroSection
         region={region}
@@ -45,14 +53,17 @@ export default async function HomePage() {
       />
 
       {/* Climate Section */}
-      {climate && (
-        <ClimateSection climate={climate} region={region} />
-      )}
+      {climate && <ClimateSection climate={climate} region={region} />}
 
       {/* Tours Section */}
-      {toursSection && (
-        <ToursSection toursSection={toursSection} />
-      )}
+      {toursSection && <ToursSection toursSection={toursSection} />}
+
+      {/* Guides Section */}
+      {guidesSection && <GuidesSection guidesSection={guidesSection} />}
+
+      {needHelp && <NeedHelpSection needHelp={needHelp} />}
+
+      {reasons && <ReasonsSection reasonsSection={reasons} />}
     </main>
   );
 }

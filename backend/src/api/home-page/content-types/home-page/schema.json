@@ -53,6 +53,21 @@
       "type": "component",
       "component": "layout.tours-section",
       "repeatable": false
+    },
+    "guidesSection": {
+      "type": "component",
+      "component": "layout.guides-section",
+      "repeatable": false
+    },
+    "needHelp": {
+      "type": "component",
+      "component": "layout.need-help",
+      "repeatable": false
+    },
+    "reasons": {
+      "type": "component",
+      "component": "layout.reasons",
+      "repeatable": false
     }
   }
 }

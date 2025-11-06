@@ -20,7 +20,7 @@ export function ClimateSection({ climate, region }: ClimateSectionProps) {
   }
 
   return (
-    <div className="mt-16 overflow-x-auto bg-gray-300 rounded-2xl p-2">
+    <div className="my-32 overflow-x-auto bg-gray-200 rounded-2xl p-2">
       <Table>
         <TableCaption>
           Average Temperature (°C) and Sunny Days by Month

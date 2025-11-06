@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_need_helps",
+  "info": {
+    "displayName": "NeedHelp"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "button": {
+      "type": "component",
+      "component": "components.link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

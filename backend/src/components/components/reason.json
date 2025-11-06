@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_components_reasons",
+  "info": {
+    "displayName": "Reason"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

@@ -53,6 +53,17 @@ export interface ComponentsLink extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsReason extends Struct.ComponentSchema {
+  collectionName: 'components_components_reasons';
+  info: {
+    displayName: 'Reason';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ComponentsTourCard extends Struct.ComponentSchema {
   collectionName: 'components_components_tour_cards';
   info: {
@@ -111,6 +122,19 @@ export interface LayoutFooter extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutGuidesSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_guides_sections';
+  info: {
+    description: 'A section containing multiple guide cards';
+    displayName: 'GuidesSection';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'components.link', false>;
+    guideCards: Schema.Attribute.Component<'components.image-link', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface LayoutHeader extends Struct.ComponentSchema {
   collectionName: 'components_layout_headers';
   info: {
@@ -123,6 +147,29 @@ export interface LayoutHeader extends Struct.ComponentSchema {
     logo: Schema.Attribute.Component<'components.image-link', false>;
     menuTabs: Schema.Attribute.Component<'navigation.menu-item', true>;
     phone: Schema.Attribute.Component<'components.link', false>;
+  };
+}
+
+export interface LayoutNeedHelp extends Struct.ComponentSchema {
+  collectionName: 'components_layout_need_helps';
+  info: {
+    displayName: 'NeedHelp';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'components.link', false>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutReasons extends Struct.ComponentSchema {
+  collectionName: 'components_layout_reasons';
+  info: {
+    displayName: 'Reasons';
+  };
+  attributes: {
+    reason: Schema.Attribute.Component<'components.reason', true>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -192,11 +239,15 @@ declare module '@strapi/strapi' {
       'components.climate-for-month': ComponentsClimateForMonth;
       'components.image-link': ComponentsImageLink;
       'components.link': ComponentsLink;
+      'components.reason': ComponentsReason;
       'components.tour-card': ComponentsTourCard;
       'layout.address': LayoutAddress;
       'layout.climate': LayoutClimate;
       'layout.footer': LayoutFooter;
+      'layout.guides-section': LayoutGuidesSection;
       'layout.header': LayoutHeader;
+      'layout.need-help': LayoutNeedHelp;
+      'layout.reasons': LayoutReasons;
       'layout.termsand-conditions': LayoutTermsandConditions;
       'layout.tours-section': LayoutToursSection;
       'navigation.dropdown-item': NavigationDropdownItem;

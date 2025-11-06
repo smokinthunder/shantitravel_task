@@ -9,7 +9,7 @@ interface ToursSectionProps {
 
 export function ToursSection({ toursSection }: ToursSectionProps) {
   return (
-    <div className="mt-16">
+    <div className="my-28">
       {/* Section Header */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-serif mb-2">

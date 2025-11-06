@@ -479,6 +479,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Blocks;
+    guidesSection: Schema.Attribute.Component<'layout.guides-section', false>;
     image1: Schema.Attribute.Media<'images'>;
     image2: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -487,7 +488,9 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       'api::home-page.home-page'
     > &
       Schema.Attribute.Private;
+    needHelp: Schema.Attribute.Component<'layout.need-help', false>;
     publishedAt: Schema.Attribute.DateTime;
+    reasons: Schema.Attribute.Component<'layout.reasons', false>;
     region: Schema.Attribute.String;
     title: Schema.Attribute.String;
     toursSection: Schema.Attribute.Component<'layout.tours-section', false>;

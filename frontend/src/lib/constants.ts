@@ -10,7 +10,7 @@ export const API_CONFIG = {
     HOME_PAGE: "/api/home-page",
   },
   CACHE_REVALIDATION: {
-    DEFAULT: 60, // 1 minute
+    DEFAULT: 2, // 1 minute
     DISABLED: 0,
     LONG: 3600, // 1 hour
   },
@@ -24,6 +24,7 @@ export const IMAGE_CONFIG = {
     HERO_IMAGE: { width: 320, height: 320 },
     TOUR_CARD: { width: 400, height: 256 },
     LOGO: { width: 150, height: 50 },
+    GUIDE_CARD: { width: 160, height: 160 },
   },
 } as const;
 
@@ -47,7 +48,7 @@ export const UI_CONSTANTS = {
 // Responsive Breakpoints (for documentation)
 export const BREAKPOINTS = {
   SM: "640px",
-  MD: "768px", 
+  MD: "768px",
   LG: "1024px",
   XL: "1280px",
 } as const;

@@ -23,7 +23,7 @@ export function ActionButton({
     >
       <Button 
         variant={variant} 
-        className={`m-1 ${UI_CONSTANTS.TRANSITIONS.COLORS} ${className}`}
+        className={`m-1 ${UI_CONSTANTS.TRANSITIONS.COLORS} cursor-pointer ${className}`}
       >
         {children || link.label}
       </Button>
