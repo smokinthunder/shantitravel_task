@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_layout_addresses",
+  "info": {
+    "displayName": "Address"
+  },
+  "options": {},
+  "attributes": {
+    "addressText": {
+      "type": "string"
+    },
+    "placeHref": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    }
+  },
+  "config": {}
+}

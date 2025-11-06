@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_termsand_conditions",
+  "info": {
+    "displayName": "TermsandConditions"
+  },
+  "options": {},
+  "attributes": {
+    "links": {
+      "type": "component",
+      "component": "components.link",
+      "repeatable": true
+    },
+    "text": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

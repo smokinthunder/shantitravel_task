@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_components_image_links",
+  "info": {
+    "displayName": "ImageLink"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "href": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "isUrl": {
+      "type": "boolean",
+      "default": false
+    },
+    "label": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

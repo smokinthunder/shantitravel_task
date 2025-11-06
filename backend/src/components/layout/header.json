@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_layout_headers",
+  "info": {
+    "displayName": "Header"
+  },
+  "options": {},
+  "attributes": {
+    "links": {
+      "type": "component",
+      "component": "components.link",
+      "repeatable": true
+    },
+    "menuTabs": {
+      "type": "component",
+      "component": "navigation.menu-item",
+      "repeatable": true
+    },
+    "phone": {
+      "type": "component",
+      "component": "components.link",
+      "repeatable": false
+    },
+    "language": {
+      "type": "component",
+      "component": "navigation.menu-item",
+      "repeatable": false
+    },
+    "logo": {
+      "type": "component",
+      "component": "components.image-link",
+      "repeatable": false
+    },
+    "button": {
+      "type": "component",
+      "component": "components.link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_layout_tours_sections",
+  "info": {
+    "displayName": "ToursSection",
+    "description": "Tours section with title and tour cards"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "tourCards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.tour-card"
+    },
+    "viewAllButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.link"
+    }
+  }
+}

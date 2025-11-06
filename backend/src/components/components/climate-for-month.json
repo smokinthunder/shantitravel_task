@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_components_climate_for_months",
+  "info": {
+    "displayName": "ClimateForMonth"
+  },
+  "options": {},
+  "attributes": {
+    "Month": {
+      "type": "enumeration",
+      "enum": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ]
+    },
+    "avgTemp": {
+      "type": "integer"
+    },
+    "sunnyDays": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

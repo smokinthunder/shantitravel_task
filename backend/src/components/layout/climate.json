@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_layout_climates",
+  "info": {
+    "displayName": "Climate"
+  },
+  "options": {},
+  "attributes": {
+    "months": {
+      "type": "component",
+      "component": "components.climate-for-month",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

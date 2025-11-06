@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_components_tour_cards",
+  "info": {
+    "displayName": "TourCard",
+    "description": "Tour package card with details"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "duration": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "highlights": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.link"
+    },
+    "price": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}
