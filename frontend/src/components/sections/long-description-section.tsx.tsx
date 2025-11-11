@@ -69,8 +69,10 @@ export default function LongDescriptionSection({
   longDescription: any[];
 }) {
   return (
-    <section className="bg-gray-200 my-16 px-20 py-12 min-w-full -mx-20 font-sans ">
-      {parse(renderBlocksContent(longDescription))}
+    <section className="bg-gray-200 my-8 md:my-16 px-4 md:px-12 lg:px-20 py-8 md:py-12 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] font-sans">
+      <div className="container mx-auto max-w-7xl">
+        {parse(renderBlocksContent(longDescription))}
+      </div>
     </section>
   );
 }

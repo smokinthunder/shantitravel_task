@@ -44,7 +44,7 @@ export default async function HomePage() {
 
   return (
     <main
-      className={`container mx-auto ${UI_CONSTANTS.CONTAINER_PADDING} ${UI_CONSTANTS.SECTION_SPACING}`}
+      className={`container mx-auto px-4 md:px-8 lg:px-12 py-8 md:py-12 lg:py-16 max-w-7xl`}
     >
       {/* Hero Section */}
       <HeroSection

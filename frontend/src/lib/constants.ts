@@ -30,18 +30,23 @@ export const IMAGE_CONFIG = {
 
 // UI Constants
 export const UI_CONSTANTS = {
-  CONTAINER_PADDING: "px-4",
-  SECTION_SPACING: "py-16",
+  CONTAINER_PADDING: "px-4 md:px-8 lg:px-12",
+  SECTION_SPACING: "py-8 md:py-12 lg:py-16",
   GRID_GAPS: {
-    SMALL: "gap-4",
-    MEDIUM: "gap-6",
-    LARGE: "gap-12",
+    SMALL: "gap-3 md:gap-4",
+    MEDIUM: "gap-4 md:gap-6",
+    LARGE: "gap-8 md:gap-12 lg:gap-16",
   },
   TRANSITIONS: {
     DEFAULT: "transition-all duration-300",
     HOVER: "transition-transform duration-300",
     COLORS: "transition-colors",
     SHADOW: "transition-shadow",
+  },
+  RESPONSIVE_SPACING: {
+    SECTION_VERTICAL: "my-8 md:my-12 lg:my-16",
+    SECTION_LARGE: "my-12 md:my-20 lg:my-28",
+    ELEMENT_GAP: "gap-4 md:gap-6 lg:gap-8",
   },
 } as const;
 

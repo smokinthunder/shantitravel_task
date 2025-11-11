@@ -24,17 +24,17 @@ export function HeroSection({
   image2,
 }: HeroSectionProps) {
   return (
-    <div className={`flex flex-col md:flex-row justify-between items-center ${UI_CONSTANTS.GRID_GAPS.LARGE}`}>
+    <div className={`flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12 lg:gap-16`}>
       {/* Content Section */}
-      <div className="md:w-1/2 space-y-6">
+      <div className="w-full md:w-1/2 space-y-4 md:space-y-6">
         {region && (
-          <p className="text-lg font-medium text-gray-600 uppercase tracking-wide">
+          <p className="text-base md:text-lg font-medium text-gray-600 uppercase tracking-wide">
             {region}
           </p>
         )}
         
         {title && (
-          <h1 className=" font-serif leading-tight">
+          <h1 className="font-serif leading-tight text-3xl md:text-4xl lg:text-5xl">
             {title}
           </h1>
         )}
@@ -44,7 +44,7 @@ export function HeroSection({
         )}
         
         {(button1 || button2) && (
-          <div className="flex flex-row gap-2">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
             {button1 && <ActionButton link={button1} />}
             {button2 && <ActionButton link={button2} variant="outline" />}
           </div>
@@ -53,7 +53,7 @@ export function HeroSection({
 
       {/* Images Section */}
       {(image1 || image2) && (
-        <div className="relative w-96 h-96 flex justify-center items-center">
+        <div className="relative w-full md:w-1/2 h-64 md:h-80 lg:h-96 flex justify-center items-center">
           {image1 && (
             <HeroImage 
               image={image1} 

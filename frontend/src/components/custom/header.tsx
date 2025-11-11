@@ -31,12 +31,12 @@ export default function Header({ data }: HeaderProps) {
   return (
     <header 
       className={`
-        w-full bg-white shadow-md p-4 px-20 fixed top-0 z-50 
+        w-full bg-white shadow-md py-3 md:py-4 px-4 md:px-8 lg:px-20 fixed top-0 z-50 
         transition-transform duration-300 ease-in-out
         ${showStickyHeader ? 'translate-y-0' : '-translate-y-full'}
       `}
     >
-      <div className="flex flex-col space-y-4">
+      <div className="flex flex-col space-y-3 md:space-y-4">
         {/* Top Bar with Links and Contact Info */}
         <TopBar 
           links={links} 

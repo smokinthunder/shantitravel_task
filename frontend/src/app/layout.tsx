@@ -48,7 +48,7 @@ export default async function RootLayout({
                   className="min-h-[400px]" 
                 />
               }>
-                <main className="min-h-screen pt-32">{children}</main>
+                <main className="min-h-screen pt-24 md:pt-28 lg:pt-32">{children}</main>
               </ErrorBoundary>
               
               {globalData.footer && <Footer data={globalData.footer} />}

@@ -17,32 +17,32 @@ export function GuidesSection({ guidesSection }: GuidesSectionProps) {
   }
 
   return (
-    <section className="my-28">
-      <div className="flex flex-row my-16 items-center">
-        <h1 className=" flex-1 mb-2">{title}</h1>
-        <div className=" flex-4 grid lg:grid-cols-3 md:grid-cols-2 ">
+    <section className="my-12 md:my-20 lg:my-28">
+      <div className="flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12 items-start lg:items-center">
+        <h1 className="w-full lg:w-1/3 mb-0">{title}</h1>
+        <div className="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {guideCards.map((guideCard) => (
-            <a href={guideCard.href ?? "#"}>
-              <div className="flex flex-row items-center m-3 cursor-pointer hover:shadow rounded-md ">
+            <a key={guideCard.id} href={guideCard.href ?? "#"}>
+              <div className="flex flex-row items-center p-3 cursor-pointer hover:shadow-md rounded-md transition-shadow">
                 <Image
                   src={getStrapiMedia(guideCard.image.url)}
                   alt={guideCard.label}
                   width={IMAGE_CONFIG.SIZES.GUIDE_CARD.width}
                   height={IMAGE_CONFIG.SIZES.GUIDE_CARD.height}
                   unoptimized
-                  className={` object-cover rounded-md hover:scale-105 ${UI_CONSTANTS.TRANSITIONS.HOVER}`}
+                  className={`object-cover rounded-md hover:scale-105 ${UI_CONSTANTS.TRANSITIONS.HOVER}`}
                 />
-                <p className="mx-2 font-medium ">{guideCard.label}</p>
+                <p className="ml-3 font-medium">{guideCard.label}</p>
               </div>
             </a>
           ))}
         </div>
       </div>
-      <div className="text-center mt-2">
+      <div className="text-center mt-8 md:mt-10">
         <ActionButton
           link={guidesSection.button}
           variant="outline"
-          className="px-8 py-2 border-2 rounded-md hover:bg-primary hover:text-white"
+          className="px-6 md:px-8 py-2 border-2 rounded-md hover:bg-primary hover:text-white"
         />
       </div>
     </section>
