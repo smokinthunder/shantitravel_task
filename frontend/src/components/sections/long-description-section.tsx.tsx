@@ -17,12 +17,12 @@ function renderBlock(block: any): string {
     case "heading":
       const level: number = block.level || 1;
       const sizes: Record<number, string> = {
-        1: "text-4xl font-bold",
-        2: "text-3xl font-semibold",
-        3: "text-2xl font-semibold",
-        4: "text-xl font-medium",
-        5: "text-lg font-medium",
-        6: "text-base font-medium",
+        1: "text-4xl font-serif font-bold",
+        2: "text-2xl font-serif font-semibold",
+        3: "text-2xl font-serif font-semibold",
+        4: "text-xl font-serif font-medium",
+        5: "text-lg font-serif font-medium",
+        6: "text-base font-serif font-medium",
       };
       const text = block.children?.map(renderInline).join("") || "";
       return `<h${level} class="text-primary ${sizes[level]}">${text}</h${level}>`;
@@ -69,7 +69,7 @@ export default function LongDescriptionSection({
   longDescription: any[];
 }) {
   return (
-    <section className="bg-gray-200 my-16 px-20 py-12 min-w-full -mx-20 font-mono ">
+    <section className="bg-gray-200 my-16 px-20 py-12 min-w-full -mx-20 font-sans ">
       {parse(renderBlocksContent(longDescription))}
     </section>
   );

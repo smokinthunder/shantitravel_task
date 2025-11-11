@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Manrope, EB_Garamond } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/custom/header";
 import Footer from "@/components/custom/footer";
@@ -7,13 +7,13 @@ import { fetchGlobalData } from "@/lib/strapi";
 import { ErrorBoundary } from "@/components/error/error-boundary";
 import { ErrorState } from "@/components/ui/states";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const garamond = EB_Garamond({
+  variable: "--font-garamond",
   subsets: ["latin"],
 });
 
@@ -35,7 +35,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${manrope.variable} ${garamond.variable} antialiased`}
       >
         <ErrorBoundary>
           {globalData ? (

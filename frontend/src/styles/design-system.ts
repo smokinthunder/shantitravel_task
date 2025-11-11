@@ -17,19 +17,25 @@ export const DESIGN_SYSTEM = {
   // Typography scale
   TYPOGRAPHY: {
     HEADINGS: {
-      H1: 'text-heading-xl',    // 36px, serif
-      H2: 'text-heading-lg',    // 30px, serif  
-      H3: 'text-heading-md',    // 24px, semibold
-      H4: 'text-heading-sm',    // 20px, semibold
+      H1: 'text-heading-xl font-serif',    // 36px, Garamond (serif)
+      H2: 'text-heading-lg font-serif',    // 30px, Garamond (serif)  
+      H3: 'text-heading-md font-sans font-semibold',    // 24px, Manrope (sans-serif)
+      H4: 'text-heading-sm font-sans font-semibold',    // 20px, Manrope (sans-serif)
     },
     BODY: {
-      LARGE: 'text-lg',         // 18px
-      DEFAULT: 'text-base',     // 16px
-      SMALL: 'text-sm',         // 14px
+      LARGE: 'text-lg font-sans',         // 18px, Manrope
+      DEFAULT: 'text-base font-sans',     // 16px, Manrope
+      SMALL: 'text-sm font-sans',         // 14px, Manrope
     },
     SPECIAL: {
-      CAPTION: 'text-caption',  // 14px, gray
-      OVERLINE: 'text-overline', // 12px, uppercase, tracking
+      CAPTION: 'text-caption font-sans',  // 14px, Manrope, gray
+      OVERLINE: 'text-overline font-sans', // 12px, Manrope, uppercase, tracking
+      QUOTE: 'font-serif italic',         // Garamond, italic for quotes
+    },
+    FONTS: {
+      SERIF: 'font-serif',                // Garamond - for headings, quotes
+      SANS: 'font-sans',                  // Manrope - for body text, UI elements
+      MONO: 'font-mono',                  // Monospace - for code
     }
   },
 

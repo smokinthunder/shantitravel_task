@@ -34,7 +34,7 @@ export function HeroSection({
         )}
         
         {title && (
-          <h1 className="text-4xl font-serif leading-tight">
+          <h1 className=" font-serif leading-tight">
             {title}
           </h1>
         )}

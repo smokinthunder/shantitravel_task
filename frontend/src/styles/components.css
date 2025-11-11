@@ -30,11 +30,11 @@
 }
 
 .text-heading-md {
-  @apply text-2xl font-semibold;
+  @apply text-2xl font-sans font-semibold;
 }
 
 .text-heading-sm {
-  @apply text-xl font-semibold;
+  @apply text-xl font-sans font-semibold;
 }
 
 .text-caption {

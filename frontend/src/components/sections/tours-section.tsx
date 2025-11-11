@@ -12,9 +12,9 @@ export function ToursSection({ toursSection }: ToursSectionProps) {
     <div className="my-28">
       {/* Section Header */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-serif mb-2">
+        <h1 className="mb-2">
           {toursSection.title}
-        </h2>
+        </h1>
         {toursSection.subtitle && (
           <p className="text-gray-600">
             {toursSection.subtitle}

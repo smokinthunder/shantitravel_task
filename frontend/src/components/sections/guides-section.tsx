@@ -19,7 +19,7 @@ export function GuidesSection({ guidesSection }: GuidesSectionProps) {
   return (
     <section className="my-28">
       <div className="flex flex-row my-16 items-center">
-        <h2 className=" flex-1 text-4xl font-serif mb-2">{title}</h2>
+        <h1 className=" flex-1 mb-2">{title}</h1>
         <div className=" flex-4 grid lg:grid-cols-3 md:grid-cols-2 ">
           {guideCards.map((guideCard) => (
             <a href={guideCard.href ?? "#"}>

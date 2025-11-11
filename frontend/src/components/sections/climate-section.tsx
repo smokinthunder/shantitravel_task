@@ -20,15 +20,17 @@ export function ClimateSection({ climate, region }: ClimateSectionProps) {
   }
 
   return (
-    <div className="my-32 overflow-x-auto bg-gray-200 rounded-2xl p-2">
-      <Table>
-        <TableCaption>
+    <div className="my-32 overflow-x-auto bg-gray-200 rounded-2xl p-2 ">
+      <Table className="text-xs">
+        <TableCaption className="font-serif text-sm ">
           Average Temperature (°C) and Sunny Days by Month
         </TableCaption>
 
         <TableHeader>
           <TableRow>
-            <TableHead>Climate In India</TableHead>
+            <TableHead className="font-serif text-lg font-normal">
+              Climate In India
+            </TableHead>
             {climate.months.map((monthData) => (
               <TableHead key={monthData.id}>{monthData.Month}</TableHead>
             ))}
